@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Copy File - MYPROJECT</title>
+
+  <!-- Roboto Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/static/css/styles.css" />
+
+  <!-- JS -->
+  <script src="/static/js/copyfile.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo" aria-label="Logo">MYPROJECT</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Briefing File</a></li>
+          <li><a href="copyfile.html" class="nav-link active">Copy File</a></li>
+          <li><a href="designfile.html" class="nav-link">Design File</a></li>
+          <li><a href="comparefiles.html" class="nav-link">Compare Files</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-container copyfile-main">
+    <section class="upload-section">
+      <h2>Upload nouvelle copie (DOCX ou TXT)</h2>
+      <input type="file" id="fileUpload" accept=".docx,.txt" />
+      <button id="resetBtn" class="btn btn-secondary">Réinitialiser</button>
+    </section>
+
+    <section class="comparison-section">
+      <h3>Briefing (Original)</h3>
+      <textarea id="briefingText" readonly placeholder="Le briefing s’affichera ici..."></textarea>
+
+      <h3>Copie générée / Uploadée</h3>
+      <textarea id="copyText" readonly placeholder="La copie s’affichera ici..."></textarea>
+    </section>
+
+    <section class="actions-section">
+      <div class="btn-group">
+        <button id="useGeneratedCopyBtn" class="btn btn-orange">Utiliser la copie générée</button>
+        <button id="generateDesignBtn" class="btn btn-primary" disabled>Générer Design</button>
+        <button id="downloadBtn" class="btn btn-success" disabled>Télécharger (après design)</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
